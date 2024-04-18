@@ -254,7 +254,7 @@ try {
         Write-Host "File `'$AzureArcDeployPath\AzureConnectedMachineAgent.msi`' already exists." -ForegroundColor Red; throw
     }
     else {
-        Copy-Item -Path "$FolderRemotepath\AzureConnectedMachineAgent.msi" -Destination $AzureArcDeployPath -ErrorAction Stop
+        Copy-Item -Path "$PSScriptRoot\AzureConnectedMachineAgent.msi" -Destination $AzureArcDeployPath -ErrorAction Stop
         Write-Host "Install file `'AzureConnectedMachineAgent.msi`' successfully copied to $AzureArcDeployPath" -ForegroundColor Green
     }
 
